@@ -5,8 +5,10 @@ Siren.Entity = (obj) ->
         _.filter _.map(obj.entities, Siren.Entity),
             (entity) ->
                 _.every(rel, (r) -> _.contains(entity.rel, r))
-    links: () ->
-        obj.links
+    links: (rel) ->
+        links = if obj.links? then obj.links else []
+        _.filter links, (link) ->
+            _.every(rel, (r) -> _.contains(entity.rel, r))
     actions: () ->
         obj.actions
 
