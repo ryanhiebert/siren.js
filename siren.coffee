@@ -11,7 +11,7 @@ Siren.Entity = (obj) ->
                 _.every(rel, (r) -> _.contains(entity.rel, r))
     links: (rel) ->
         _.filter obj.links ? [], (link) ->
-            _.every(rel, (r) -> _.contains(entity.rel, r))
+            _.every(rel, (r) -> _.contains(link.rel, r))
     actions: () ->
         obj.actions
 
