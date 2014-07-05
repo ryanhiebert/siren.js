@@ -1,6 +1,7 @@
 Siren = (obj) -> Siren.Entity obj
 
 Siren.Entity = (obj) ->
+    properties: obj.properties
     class: (klass) ->
         if klass
             _.every klass, (c) -> _.contains(obj.class, c)
