@@ -1,4 +1,4 @@
-Siren = {}
+Siren = (obj) -> Siren.Entity obj
 
 Siren.Entity = (obj) ->
     entities: () ->
